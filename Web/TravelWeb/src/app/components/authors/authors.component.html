@@ -1,0 +1,86 @@
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<div class="row animated fadeIn" *ngIf="!loading">
+    <div class="col">
+        <h3>{{ author.name }} {{ author.surnames }}</h3>
+    </div>
+    <div class="col-4 text-right">
+        <button class="btn btn-outline-primary" *ngIf="!allAuthors" routerLink="/author">
+            Ver Todos
+        </button>
+        <button class="btn btn-outline-success " (click)="open(ModalCreateAuthor) ">
+            Crear Autor
+        </button>
+        <button routerLink="/home " class="btn btn-outline-danger ">
+            Regresar
+        </button>
+    </div>
+</div>
+
+<div class="row " *ngIf="!allAuthors ">
+    <div class="row m-5 ">
+        <div clas="col ">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Titulo</th>
+                        <th>Nro pagina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books ">
+                        <td>{{ book.books_ISBN }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.n_pages }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " *ngIf="allAuthors ">
+    <div class="row m-5 ">
+        <div clas="col ">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Ver</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let author of authors ">
+                        <td>{{ author.name }}</td>
+                        <td>{{ author.surnames }}</td>
+                        <td><button type="button " (click)="getAuthors(author) "> Ir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<ng-template #ModalCreateAuthor let-c="close " let-d="dismiss ">
+    <div class="modal-header ">
+        <h4 class="modal-title " id="modal-basic-title ">Autor</h4>
+        <button type="button " class="btn-close " aria-label="Close " (click)="d( 'Cross click') "></button>
+    </div>
+    <div class="modal-body ">
+        <div class="col-12 ">
+            <div class="col-12 ">
+                <label>Nombre:</label>
+                <input class="form-control " #txtName type="text ">
+            </div>
+            <div class="col-12 ">
+                <label>Apellidos:</label>
+                <input class="form-control " #txtSurname type="text ">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer ">
+        <button type="button " class="btn btn-outline-dark " (click)="d(postAuthor(txtName.value, txtSurname.value)) ">Crear</button>
+    </div>
+</ng-template>

@@ -1,0 +1,15 @@
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\bin\Debug\net5.0\Repository.deps.json
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\bin\Debug\net5.0\Repository.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\bin\Debug\net5.0\ref\Repository.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\bin\Debug\net5.0\Repository.pdb
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\bin\Debug\net5.0\Entities.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\bin\Debug\net5.0\Entities.pdb
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.csprojAssemblyReference.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.AssemblyInfoInputs.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.AssemblyInfo.cs
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.csproj.CoreCompileInputs.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.csproj.CopyComplete
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\ref\Repository.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Repository\obj\Debug\net5.0\Repository.pdb

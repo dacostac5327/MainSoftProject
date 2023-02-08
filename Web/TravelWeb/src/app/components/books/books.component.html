@@ -1,0 +1,11 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 m-2 animated fadeIn">
+    <div (click)="getAuthors(item)" *ngFor="let item of items" class="col puntero">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><b>Titulo: </b>{{ item.title }}</h5>
+                <p class="card-text"><b>Sinopsis: </b>{{ item.synopsis }}</p>
+                <p><label><b>Autor:</b> </label>{{ item.nameAuthor }} {{ item.surnamesAuthor }}</p>
+            </div>
+        </div>
+    </div>
+</div>

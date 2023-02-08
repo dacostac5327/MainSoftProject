@@ -1,0 +1,15 @@
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\bin\Debug\net5.0\Entities.runtimeconfig.json
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\bin\Debug\net5.0\Entities.runtimeconfig.dev.json
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\bin\Debug\net5.0\Entities.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\bin\Debug\net5.0\ref\Entities.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\bin\Debug\net5.0\Entities.pdb
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.csprojAssemblyReference.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\ref\Entities.dll
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.pdb
+D:\Desarrollo\Main\Travel\App\Services\Travel\Entities\obj\Debug\net5.0\Entities.genruntimeconfig.cache

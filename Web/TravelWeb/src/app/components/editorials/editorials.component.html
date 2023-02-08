@@ -1,0 +1,94 @@
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<div class="row animated fadeIn" *ngIf="!loading">
+    <div class="col">
+        <div *ngIf="!allEditorials">
+            <b>Nombre:</b>
+            <h3> {{ editorial.name }}</h3>
+            <div class="row col-12">
+                <div class="col-12">
+                    <label><b>Sede:</b> {{ editorial.campus }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 text-right">
+        <button class="btn btn-outline-primary" *ngIf="!allEditorials" routerLink="/editorial">
+            Ver Todos
+        </button>
+        <button class="btn btn-outline-success " (click)="open(ModalCreateEditorials) ">
+            Crear Editorial
+        </button>
+        <button routerLink="/home " class="btn btn-outline-danger ">
+            Regresar
+        </button>
+    </div>
+</div>
+
+<div class="row " *ngIf="!allEditorials">
+    <div class="row m-5 ">
+        <div clas="col ">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Titulo</th>
+                        <th>Nro pagina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td>{{ book.books_ISBN }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.n_pages }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " *ngIf="allEditorials">
+    <div class="row m-5 ">
+        <div clas="col ">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Sede</th>
+                        <th>Ver</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let editorial of editorials">
+                        <td>{{ editorial.name }}</td>
+                        <td>{{ editorial.campus }}</td>
+                        <td><button type="button " (click)="getEditorialById(editorial)"> Ir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<ng-template #ModalCreateEditorials let-c="close " let-d="dismiss ">
+    <div class="modal-header ">
+        <h4 class="modal-title " id="modal-basic-title ">Editorial</h4>
+        <button type="button " class="btn-close " aria-label="Close " (click)="d( 'Cross click') "></button>
+    </div>
+    <div class="modal-body ">
+        <div class="col-12 ">
+            <div class="col-12 ">
+                <label>Nombre:</label>
+                <input class="form-control " #txtName type="text ">
+            </div>
+            <div class="col-12 ">
+                <label>Sede:</label>
+                <input class="form-control " #txtCampus type="text ">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer ">
+        <button type="button " class="btn btn-outline-dark " (click)="d(postEditorial(txtName.value, txtCampus.value)) ">Crear</button>
+    </div>
+</ng-template>

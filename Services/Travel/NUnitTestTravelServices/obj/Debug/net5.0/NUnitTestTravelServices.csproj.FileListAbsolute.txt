@@ -1,0 +1,6 @@
+D:\Desarrollo\Main\Travel\App\Services\Travel\NUnitTestTravelServices\bin\Debug\net5.0\CoverletSourceRootsMapping
+D:\Desarrollo\Main\Travel\App\Services\Travel\NUnitTestTravelServices\obj\Debug\net5.0\NUnitTestTravelServices.csprojAssemblyReference.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\NUnitTestTravelServices\obj\Debug\net5.0\NUnitTestTravelServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollo\Main\Travel\App\Services\Travel\NUnitTestTravelServices\obj\Debug\net5.0\NUnitTestTravelServices.AssemblyInfoInputs.cache
+D:\Desarrollo\Main\Travel\App\Services\Travel\NUnitTestTravelServices\obj\Debug\net5.0\NUnitTestTravelServices.AssemblyInfo.cs
+D:\Desarrollo\Main\Travel\App\Services\Travel\NUnitTestTravelServices\obj\Debug\net5.0\NUnitTestTravelServices.csproj.CoreCompileInputs.cache

@@ -1,0 +1,108 @@
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<div class="row animated fadeIn" *ngIf="!loading">
+    <div class="col">
+        <div *ngIf="!allBooks">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Titulo: </b> {{ book.title }}</h5>
+                    <p class="card-text"><b>Sinopsis: </b> {{ book.synopsis }}</p>
+                    <p><label><b>Autor:</b> </label>{{ book.nameAuthor }} {{ book.surnamesAuthor }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 text-right">
+        <button class="btn btn-outline-primary" *ngIf="!allBooks" routerLink="/editorial">
+            Ver Todos
+        </button>
+        <button class="btn btn-outline-success " (click)="open(ModalCreateBooks) ">
+            Crear Libro
+        </button>
+        <button routerLink="/home " class="btn btn-outline-danger ">
+            Regresar
+        </button>
+    </div>
+</div>
+
+<div class="row " *ngIf="allBooks">
+    <div class="row m-5 ">
+        <div clas="col ">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>Titulo</th>
+                        <th>Nro pagina</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td>{{ book.isbn }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.n_pages }}</td>
+                        <td>
+                            <button type="button " (click)="openId(ModalBooksAuthors, book.isbn)"> Agregar Autor</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<ng-template #ModalCreateBooks let-c="close " let-d="dismiss ">
+    <div class="modal-header ">
+        <h4 class="modal-title " id="modal-basic-title ">Editorial</h4>
+        <button type="button " class="btn-close " aria-label="Close " (click)="d( 'Cross click') "></button>
+    </div>
+    <div class="modal-body ">
+        <div class="col-12 ">
+            <div class="col-12 ">
+                <label>ISBN:</label>
+                <input class="form-control" #txtISBN type="number">
+            </div>
+            <div class="col-12 ">
+                <label>Editorial:</label>
+                <select #ddlEditorial class="form-control">
+                    <option [value]="editorial.id" *ngFor="let editorial of editorials">{{ editorial.name }}</option>
+                </select>
+            </div>
+            <div class="col-12 ">
+                <label>Titulo:</label>
+                <input class="form-control " #txtTitle type="text">
+            </div>
+            <div class="col-12 ">
+                <label>Sinopsis:</label>
+                <textarea rows="7" class="form-control " #txtSynopsis type="text"></textarea>
+            </div>
+            <div class="col-12 ">
+                <label>No. Paginas:</label>
+                <input class="form-control " #txtNoPages type="number">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer ">
+        <button type="button " class="btn btn-outline-dark " (click)="d(postBook(txtISBN.value, ddlEditorial.value, txtTitle.value, txtSynopsis.value, txtNoPages.value))">Crear</button>
+    </div>
+</ng-template>
+
+<ng-template #ModalBooksAuthors let-c="close " let-d="dismiss ">
+    <div class="modal-header ">
+        <h4 class="modal-title " id="modal-basic-title ">Agregar Autor</h4>
+        <button type="button " class="btn-close " aria-label="Close " (click)="d( 'Cross click') "></button>
+    </div>
+    <div class="modal-body ">
+        <div class="col-12 ">
+            <div class="col-12 ">
+                <label>Autor:</label>
+                <select #ddlAuthors class="form-control">
+                    <option [value]="author.id" *ngFor="let author of authors">{{ author.name }} {{ author.surnames }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer ">
+        <button type="button " class="btn btn-outline-dark " (click)="d(postAuthorBook(ddlAuthors.value))">Crear</button>
+    </div>
+</ng-template>
